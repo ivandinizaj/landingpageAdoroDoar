@@ -1,3 +1,29 @@
+.ti-control-play{
+
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  color: #281483;
+  border: 2px solid #fff;
+  background: #fff;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: all 0.3s ease-in;
+  -webkit-animation: ripple-white 1s linear infinite;
+  /* animation: ripple-white 1s linear infinite; */
+  -webkit-transition: .5s linear;
+}
+
+.ti-control-play:before {
+    font-size: 18px;
+    line-height: 28px;
+    margin-left: 2px;
+}
+.ti-control-play:before {
+    content: "\e6ad";
+}
+
 /*-----------------------------------------------------------------------------------
 
     Template Name:Chatloop APP
@@ -686,6 +712,7 @@ section {
 /*=====================
     04.about section ends
 ==========================*/
+
 /*=====================
     05.feature section start
 ==========================*/
@@ -911,63 +938,32 @@ section {
 /*=====================
     07.screenshots section start
 ==========================*/
-.theme-bg .animation-circle i {
-  bottom: 0; }
-
-.slider-mobile {
+#screenshots{
+  height: 480px;
+}
+.tv {
   position: absolute;
-  z-index: 2;
+  top: 0;
   left: 0;
-  right: 0;
-  margin: 0 auto;
-  text-align: center;
-  top: 0; }
-
-.swiper-container {
+  z-index: 1;
   width: 100%;
   height: 100%;
-  overflow: hidden; }
-
-.swiper-gallery-container {
-  text-align: center;
-  font-size: 18px;
-  background: #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
-
-.swiper-container-3d .swiper-slide-shadow-left {
-  background-image: none; }
-.swiper-container-3d .swiper-slide-shadow-right {
-  background-image: none; }
-
-.swiper-pagination-custom {
-  position: relative;
-  margin-top: 55px; }
-
-.swiper-pagination-fraction {
-  position: relative;
-  margin-top: 55px; }
-
-#slider .swiper-pagination-custom {
+  overflow: hidden;
+}
+.tv .screen {
   position: absolute;
-  margin-top: 30px;
-  bottom: 30px; }
-#slider .swiper-pagination-fraction {
-  position: absolute;
-  margin-top: 30px;
-  bottom: 30px; }
-#slider.swiper-container-horizontal > .swiper-pagination-bullets {
-  position: absolute;
-  margin-top: 30px;
-  bottom: 30px; }
-
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  margin: auto;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.tv .screen.active {
+  opacity: 1;
+}
 /*=====================
     07.screenshots section ends
 ==========================*/
